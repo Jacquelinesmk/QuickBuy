@@ -29,7 +29,9 @@ namespace QuickBuy.Web
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 			var connectionString = Configuration.GetConnectionString("QuickBuyDB"); //Percorre o arquivo de configuração config.json, procurando o par chave e valor, onde a chave é o QuickBuyDB e retorna seu valor
 			services.AddDbContext<QuickBuyContexto>(option => 
-														option.UseMySql(connectionString,
+														option
+															.UseLazyLoadingProxies()
+															.UseMySql(connectionString,
 																			m => m.MigrationsAssembly("QuickBuy.Repositorio")));
 
 			// In production, the Angular files will be served from this directory
