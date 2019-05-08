@@ -27,11 +27,11 @@ namespace QuickBuy.Repositorio.Contexto
 		{
 			/// Classes de mapeamento aqui...
 
-			modelBuilder.ApplyConfiguration(new UsuarioConfiguration);
-			modelBuilder.ApplyConfiguration(new ProdutoConfiguration);
-			modelBuilder.ApplyConfiguration(new PedidoConfiguration);
-			modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration);
-			modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration);
+			modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+			modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+			modelBuilder.ApplyConfiguration(new PedidoConfiguration());
+			modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
+			modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
 			base.OnModelCreating(modelBuilder);
 		}
 	}
